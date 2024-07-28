@@ -1,0 +1,68 @@
+<div class="container">
+    <h2>List of Users</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Website</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" (dblclick)="handleDoubleClick(user)" (touchstart)="handleTouchStart($event)" (touchend)="handleTouchEnd(user)" (touchmove)="handleTouchMove()">
+            <td [ngClass]="{'invalid': isInvalidName(user.name)}">{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td [ngClass]="{'invalid': isInvalidPhone(user.phone)}">{{ user.phone }}</td>
+            <td [ngClass]="{'invalid-website': isInvalidWebsite(user.website)}"><a [href]="'http://' + user.website" target="_blank">{{ user.website }}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Guide -->
+    <div class="guide">
+      <p><span class="color-box invalid"></span> Red - Mandatory cell with data formatting violation</p>
+      <p><span class="color-box invalid-website"></span> Yellow - Non-mandatory cell with data formatting violation</p>
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal" [class.show]="isModalOpen">
+      <div class="modal-content" *ngIf="selectedUser">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <h2>Edit User Details</h2>
+        <form #userForm="ngForm" (ngSubmit)="saveUser()">
+          <label for="name">Name:</label>
+          <input type="text" id="name" [(ngModel)]="selectedUser.name" name="name" required pattern="[A-Za-z ]+" title="Only English characters allowed" #name="ngModel">
+          <div *ngIf="name.invalid && (name.dirty || name.touched)">
+            <div *ngIf="name.errors?.['required']">Name is required.</div>
+            <div *ngIf="name.errors?.['pattern']">Name must contain only English characters.</div>
+          </div>
+          <br><br>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" [(ngModel)]="selectedUser.email" name="email" disabled>
+          <br><br>
+  
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" [(ngModel)]="selectedUser.phone" name="phone" required pattern="^(\+9725[0-9]{8})$" title="Phone number must be in the format: +9725XXXXXXXX" #phone="ngModel">
+          <div *ngIf="phone.invalid && (phone.dirty || phone.touched)">
+            <div *ngIf="phone.errors?.['required']">Phone is required.</div>
+            <div *ngIf="phone.errors?.['pattern']">Phone number must be in the format: +9725XXXXXXXX.</div>
+          </div>
+          <br><br>
+  
+          <label for="website">Website:</label>
+          <input type="url" id="website" [(ngModel)]="selectedUser.website" name="website" pattern="https?://.+" #website="ngModel">
+          <div *ngIf="website.invalid && (website.dirty || website.touched)">
+            <div *ngIf="website.errors?.['pattern']">Invalid URL.</div>
+          </div>
+          <br><br>
+  
+          <button type="submit" [disabled]="userForm.invalid">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

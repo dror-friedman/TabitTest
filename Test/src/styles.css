@@ -1,0 +1,193 @@
+/* Apply the Poppins font to the entire project */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px; /* Add margin to create space between items */
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .nav-item:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+  
+  /* General container styles */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  /* Table wrapper to allow horizontal scrolling */
+  .table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    min-width: 800px; /* Set a minimum width for the table to accommodate all columns */
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+  }
+  
+  /* Link styles */
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Invalid input styles */
+  div.ng-invalid.ng-touched {
+    border-color: red;
+  }
+  
+  .invalid {
+    background-color: #f8d7da;
+  }
+  
+  .invalid-website {
+    background-color: #fff3cd;
+  }
+  
+  /* Guide styles */
+  .guide {
+    margin-top: 20px;
+  }
+  
+  .guide p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border: 1px solid black; /* Added border */
+  }
+  
+  .color-box.invalid {
+    background-color: #f8d7da;
+  }
+  
+  .color-box.invalid-website {
+    background-color: #fff3cd;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    .table-wrapper {
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    table {
+      min-width: 800px; /* Set a minimum width for the table */
+    }
+  
+    th, td {
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    .table-wrapper {
+      overflow-x: auto; /* Enable horizontal scrolling */
+    }
+  
+    table {
+      min-width: 800px; /* Set a minimum width for the table */
+    }
+  
+    th, td {
+      white-space: nowrap; /* Prevent text from wrapping */
+    }
+  }
+  
