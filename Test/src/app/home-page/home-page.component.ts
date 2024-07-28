@@ -14,7 +14,7 @@ export class HomePageComponent {
   shownTexts: string[] = [];
 
   showAlert() {
-    alert('Button clicked! Welcome!');
+    alert('Click on Demo tab to show the task results!');
   }
 
   changeBackground() {
