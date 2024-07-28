@@ -1,9 +1,7 @@
-/* Apply the Poppins font to the entire project */
 body {
     font-family: 'Poppins', sans-serif;
   }
   
-  /* Your existing styles... */
   
   table {
     width: 100%;
@@ -31,7 +29,7 @@ body {
     text-decoration: underline;
   }
   
-  /* Modal styles */
+  /* modal styles */
   .modal {
     display: none;
     position: fixed;
@@ -114,7 +112,7 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    border: 1px solid black; /* Added border */
+    border: 1px solid black; 
   }
   
   .color-box.invalid {

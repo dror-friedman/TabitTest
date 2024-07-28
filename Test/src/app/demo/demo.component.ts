@@ -15,7 +15,7 @@ export class DemoComponent implements OnInit {
   selectedUser: any = {};
   isModalOpen: boolean = false;
   touchStartTime: number = 0;
-  touchDurationThreshold: number = 300; // Shorter duration in milliseconds to detect tap-and-hold
+  touchDurationThreshold: number = 300; 
   touchMoved: boolean = false;
 
   constructor(private http: HttpClient) {}
@@ -66,7 +66,7 @@ export class DemoComponent implements OnInit {
 
   isInvalidWebsite(website: string): boolean {
     if (!website) {
-      return false; // Consider empty website as valid if not required
+      return false; 
     }
     const websitePattern = /^https?:\/\/.+$/;
     return !websitePattern.test(website);
