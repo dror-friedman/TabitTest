@@ -1,3 +1,4 @@
+/* Apply the Poppins font to the entire project */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -5,6 +6,7 @@ body {
     box-sizing: border-box;
   }
   
+  /* Navbar Styles */
   .navbar {
     display: flex;
     justify-content: center;
@@ -16,7 +18,7 @@ body {
   .nav-item {
     color: white;
     text-decoration: none;
-    margin: 0 30px; 
+    margin: 0 30px; /* Add margin to create space between items */
     padding: 10px;
     transition: background-color 0.3s, transform 0.3s;
   }
@@ -26,33 +28,34 @@ body {
     transform: scale(1.1);
   }
   
+  /* General container styles */
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    overflow-x: auto; 
+    overflow-x: auto; /* Enable horizontal scrolling */
   }
   
-
+  /* Table wrapper to allow horizontal scrolling */
   .table-wrapper {
     width: 100%;
-    overflow-x: auto; 
+    overflow-x: auto; /* Enable horizontal scrolling */
   }
   
- 
+  /* Table styles */
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
-    min-width: 800px; 
+    min-width: 800px; /* Set a minimum width for the table to accommodate all columns */
   }
   
   th, td {
     padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
-    white-space: nowrap; 
+    white-space: nowrap; /* Prevent text from wrapping */
   }
   
   th {
@@ -60,7 +63,7 @@ body {
     cursor: pointer;
   }
   
-
+  /* Link styles */
   a {
     color: blue;
     text-decoration: none;
@@ -70,7 +73,7 @@ body {
     text-decoration: underline;
   }
   
-
+  /* Modal styles */
   .modal {
     display: none;
     position: fixed;
@@ -111,7 +114,7 @@ body {
     cursor: pointer;
   }
   
- 
+  /* Invalid input styles */
   div.ng-invalid.ng-touched {
     border-color: red;
   }
@@ -124,7 +127,7 @@ body {
     background-color: #fff3cd;
   }
   
-
+  /* Guide styles */
   .guide {
     margin-top: 20px;
   }
@@ -140,7 +143,7 @@ body {
     width: 20px;
     height: 20px;
     margin-right: 5px;
-    border: 1px solid black; 
+    border: 1px solid black; /* Added border */
   }
   
   .color-box.invalid {
@@ -151,40 +154,40 @@ body {
     background-color: #fff3cd;
   }
   
- 
+  /* Media Queries for Responsiveness */
   @media (max-width: 768px) {
     .container {
-      overflow-x: auto;
+      overflow-x: auto; /* Enable horizontal scrolling */
     }
   
     .table-wrapper {
-      overflow-x: auto; 
+      overflow-x: auto; /* Enable horizontal scrolling */
     }
   
     table {
-      min-width: 800px; 
+      min-width: 800px; /* Set a minimum width for the table */
     }
   
     th, td {
-      white-space: nowrap; 
+      white-space: nowrap; /* Prevent text from wrapping */
     }
   }
   
   @media (max-width: 480px) {
     .container {
-      overflow-x: auto; 
+      overflow-x: auto; /* Enable horizontal scrolling */
     }
   
     .table-wrapper {
-      overflow-x: auto; 
+      overflow-x: auto; /* Enable horizontal scrolling */
     }
   
     table {
-      min-width: 800px; 
+      min-width: 800px; /* Set a minimum width for the table */
     }
   
     th, td {
-      white-space: nowrap; 
+      white-space: nowrap; /* Prevent text from wrapping */
     }
   }
   
