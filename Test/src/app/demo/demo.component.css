@@ -5,31 +5,26 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  height: 100vh; /* Use full viewport height */
+  overflow-y: auto; /* enable vertical scrolling */
+  height: 100vh; /* full viewport height */
 }
 
 nz-table {
   width: 100%;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
 
-table th, table td {
+nz-table th, nz-table td {
   padding: 10px;
   border: 1px solid #ddd;
-  text-align: center !important; /* Force text to be centered */
-  vertical-align: middle !important; /* Force vertical centering */
+  text-align: center !important; /* force text to be centered */
+  vertical-align: middle !important; /* force vertical centering */
 }
 
-table th {
+nz-table th {
   background-color: #f4f4f4;
   cursor: pointer;
-  width: 25%; /* Distribute columns evenly */
+  width: 25%; /* spread columns evenly */
 }
 
 a {
@@ -53,7 +48,7 @@ a:hover {
   margin-top: 20px;
   padding: 10px;
   width: 100%;
-  flex-shrink: 0; /* Prevent the guide from shrinking */
+  flex-shrink: 0; /* prevent the guide from shrinking */
 }
 
 .guide p {
@@ -67,7 +62,7 @@ a:hover {
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  border: 1px solid black; /* Added border */
+  border: 1px solid black; 
 }
 
 .color-box.invalid {
@@ -78,32 +73,32 @@ a:hover {
   background-color: #fff3cd;
 }
 
-/* Modal styles */
+/* modal styles */
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 90%; /* Make modal content responsive */
-  max-width: 500px; /* Set a max width for larger screens */
-  max-height: 80vh; /* Ensure modal content fits within the viewport */
-  overflow-y: auto; /* Allow scrolling within the modal if content overflows */
+  width: 90%; 
+  max-width: 500px; 
+  max-height: 80vh; 
+  overflow-y: auto; 
 }
 
-/* Ensure the modal behaves well on mobile devices */
+/* modal behaviour on mobile devices */
 @media (max-width: 768px) {
   .modal-content {
-    width: 90%; /* Set width to 90% on mobile screens */
-    max-height: 70vh; /* Adjust modal max height on mobile */
+    width: 90%; 
+    max-height: 70vh; 
   }
 
   .container {
-    height: auto; /* Auto height for content to fit */
-    overflow-y: auto; /* Ensure vertical scrolling */
+    height: auto; /* auto height */
+    overflow-y: auto; /* vertical scrolling */
   }
 
   table-wrapper {
-    max-height: 50vh; /* Adjust max height to leave room for the guide */
+    max-height: 50vh; /* max height to leave room for the guide */
   }
 
   .guide {
@@ -113,9 +108,9 @@ a:hover {
 
 @media (max-width: 480px) {
   .modal-content {
-    width: 95%; /* Set width to 95% on very small screens */
-    margin-top: 20%; /* Increase top margin on very small screens */
-    max-height: 70vh; /* Adjust modal max height on small screens */
+    width: 95%; /* set width to 95% on very small screens */
+    margin-top: 20%; /* increase top margin on very small screens */
+    max-height: 70vh; /* adjust modal max height on small screens */
   }
 
   .container {
