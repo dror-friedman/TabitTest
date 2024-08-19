@@ -55,7 +55,7 @@ export class DemoComponent implements OnInit {
     this.modalRef = this.modal.create({
       nzTitle: 'Edit User Details',
       nzContent: this.editUserModal,
-      nzWidth: '90%',  // Adjust width for mobile screens
+      nzWidth: '90%',  // width for mobile screens
       nzOnOk: () => this.saveUser(),
       nzOnCancel: () => this.closeModal(),
       nzOkDisabled: !this.isFormValid()
@@ -74,15 +74,13 @@ export class DemoComponent implements OnInit {
 
   onClickOrTap(user: any) {
     if (this.isMobileDevice()) {
-      // On mobile, open modal on a single tap
+      // mobile - open modal on single tap
       this.openModal(user);
-    }
-    // On desktop, wait for double-click instead (do nothing on single click)
   }
 
   onDoubleClick(user: any) {
     if (!this.isMobileDevice()) {
-      // On desktop, open modal on a double-click
+      // desktop - open modal on doubleclick
       this.openModal(user);
     }
   }
